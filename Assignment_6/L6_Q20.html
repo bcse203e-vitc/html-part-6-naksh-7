@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q20</title>
+    <script>
+        function inp(){  
+            let str = prompt("Enter a string", "hello");
+            let count = new Array(256).fill(0);
+            for(let s of str){
+                count[s.charCodeAt(0)]++;
+            }
+            let result = "";
+            for(let i=0;i<count.length;i++){
+                if(count[i]>0){
+                    result+= "\""+String.fromCharCode(i)+"\"" +": "+ count[i]+" ";
+                }
+            }
+            document.getElementById("s1").innerHTML = result;
+        }
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

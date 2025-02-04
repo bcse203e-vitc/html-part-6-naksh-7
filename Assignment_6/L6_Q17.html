@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q17</title>
+    <script>
+        function inp() {  
+            let inp = prompt("Enter the decimal", "10");  
+            inp = Number(inp);
+            let bin = inp.toString(2);
+            document.getElementById("s1").innerHTML = "Binary Number: "+bin;
+        }   
+        
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

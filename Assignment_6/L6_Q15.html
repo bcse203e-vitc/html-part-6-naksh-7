@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q15</title>
+    <script>
+        function inp(){
+            let inp = prompt("Enter array of numbers", "");
+            let arr = inp.split(" ").map(Number); 
+            let num = check(arr);
+            let txt = "";
+            if(num==-1){
+                txt = "There is no missing number"
+            }
+            else{
+                num--;
+                txt = num+" is the missing number"
+            }
+            document.getElementById("s1").innerHTML = txt;
+        }
+        function check(arr) {  
+            for (let i = 1; i < arr.length; i++) {  
+                if(arr[i]-arr[i-1]!=1){
+                    return arr[i];
+                }  
+            }  
+
+            return -1;  
+        } 
+        
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

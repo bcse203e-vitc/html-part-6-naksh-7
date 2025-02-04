@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q14</title>
+    <script>
+        function inp(){
+            let str = prompt("enter the string");
+        
+            str = str.toLowerCase;
+            
+            let i=0;
+            let txt="";
+            const arr = new Set();
+            for(i=0;i<str.length;i++){
+                if(isAlphabet(str[i])){
+                    arr.add(str[i]);
+                }
+            }
+            if(arr.size==26){
+                txt = "Yes, it is a panagram";
+            }else{
+                txt = "No, it is not a panagram";
+            }
+            document.getElementById("s1").innerHTML = txt;
+        }
+        function isAlphabet(char) {  
+            return /^[A-Za-z]$/.test(char);  
+        }
+    </script>
+</head>
+<body>
+    <button id="click" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q19</title>
+    <script>
+        function inp(){  
+            let str = prompt("Enter a string", "I love programming");
+            let txt = "";
+            let max = "";
+            let s = str.split(" ");
+            for(txt of s){
+                if(txt.length > max.length){
+                    max = txt;
+                }
+            }
+            document.getElementById("s1").innerHTML = "Longest word: "+max;
+        }
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

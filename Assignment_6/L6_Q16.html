@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q16</title>
+    <script>
+        function inp() {  
+            let inp = prompt("Enter array of numbers (space-separated)", "");  
+            let arr = inp.split(" ").map(Number);  
+            check(arr);  
+            let asc = arr.join(", "); 
+            let dsc = arr.slice().reverse().join(", ");  
+            let txt = "Ascending Order: " + asc + "     |     Descending Order: " + dsc;  
+            document.getElementById("s1").innerHTML = txt;  
+        }  
+        function check(arr) {  
+            for (let i=0;i<arr.length;i++){  
+                for(let j=i+1;j<arr.length;j++){
+                    if(arr[i]>arr[j]){
+                        let temp = arr[i];
+                        arr[i] = arr[j]
+                        arr[j] = temp
+                    }
+                }  
+            }    
+        } 
+        
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

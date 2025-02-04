@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q18</title>
+    <script>
+        function inp(){  
+            let str = prompt("Enter a string", "swiss");
+            str = str.toLowerCase();
+            let txt = "";
+            for(let i=0;i<str.length;i++){
+                found =1;
+                for(let j=i+1;j<str.length;j++){
+                    if(str[i]==str[j]){
+                        found =0;
+                        break;
+                    }
+                }
+                if(found==1){
+                    txt = str[i];
+                    break;
+                }
+            }
+            document.getElementById("s1").innerHTML = "First non-repeating charachter: "+txt;
+        }
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>
