@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10</title>
+    <script>
+        function inp(){
+            let a = prompt("Enter numbers","153");
+            
+            let txt = arm(a);
+            document.getElementById("s1").innerHTML = "is "+ a+ " an armstrong number: "+ txt;
+        }
+        function arm(num) {
+            let digits = num.toString().split('');
+            let numDigits = digits.length;
+            let sum = 0;
+            for (let i = 0; i < numDigits; i++) {
+                sum += Math.pow(parseInt(digits[i]), numDigits);
+            }
+            if(sum==num){
+                return "Yes";
+            }
+            else{
+                return "No";
+            }
+        }
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

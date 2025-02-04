@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+    <script>
+        function inp(){
+            let a = prompt("Enter numbers","12,18");
+            let a1 = a.split(",");
+            let b = gcd(a1[0],a1[1]);
+            document.getElementById("s1").innerHTML = "Gcd: "+ b;
+        }
+        function gcd(a, b) {
+            if (b === 0) {
+                return a;
+            }
+            return gcd(b, a % b);
+        }
+    
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

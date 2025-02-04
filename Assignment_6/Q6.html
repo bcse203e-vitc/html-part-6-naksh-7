@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q6</title>
+    <script>
+        function temp(){
+            let num = prompt("Enter numbers");
+            let f = (num*9)/5+32
+            document.getElementById("s1").innerHTML = "Temperature in Fahrenheit: " + f;
+        }
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="temp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

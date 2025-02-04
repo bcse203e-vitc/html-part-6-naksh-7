@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q4</title>
+    <script>
+        function reverse(){
+            let num = prompt("Enter numbers","123");
+            let a = "";
+            let i = num.length - 1;
+            while(i >= 0){
+                a += num[i];
+                i--;
+            }
+            document.getElementById("s1").innerHTML = "Reversed: " + a;
+        }
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="reverse()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>

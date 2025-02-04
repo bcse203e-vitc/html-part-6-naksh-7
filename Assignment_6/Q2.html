@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q2</title>
+    <script>
+        function largest(){
+            let num = prompt("Enter three numbers", "2 5 3");
+            let a = num.split(" ").map(Number);
+            let max = 0;
+            for(let i=0;i<a.length;i++){
+                if(a[i]>max){
+                    max = a[i];
+                }
+            }
+            let txt = "Largest No: " + max;
+            document.getElementById("s1").innerHTML = txt;
+        }
+    </script>
+</head>
+<body>
+    <button id="large" onclick="largest()">Click me</button>
+    <p id="s1">Largest No: NULL</p>
+</body>
+</html>
+

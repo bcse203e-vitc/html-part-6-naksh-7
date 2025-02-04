@@ -1,1 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+    <script>
+        function swap1(){
+            let num = prompt("Enter two numbers separated by a space", "2 5");
+            let a = num.split(" ").map(Number);
+            a[0] = a[0] + a[1];
+            a[1] = a[0] - a[1];
+            a[0] = a[0] - a[1];
+            let txt = "Answer: " + a[0] + " " + a[1];
+            document.getElementById("s1").innerHTML = txt;
+        }
+    </script>
+</head>
+<body>
+    <button id="swap" onclick="swap1()">Click to swap</button>
+    <p id="s1">Answer: NULL</p>
+</body>
+</html>
 

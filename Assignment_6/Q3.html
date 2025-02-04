@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+    <script>
+        function diff(){
+            let num = prompt("Enter three numbers", "2 5 3");
+            let a = num.split(" ").map(Number);
+            let even = []
+            let odd =[]
+            let k=0,l=0;
+            for(let i=0;i<a.length;i++){
+                if(a[i]%2==0){
+                    even[k++] = a[i];
+                }
+                else{
+                    odd[l++] = a[i];
+                }
+            }
+            let txt = "Differentiated\nEven: " + even+"\nOdd: "+ odd.join(", ");
+            document.getElementById("s1").innerHTML = txt;
+        }
+    </script>
+</head>
+<body>
+    <button id="large" onclick="diff()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>
+
