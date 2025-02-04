@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q10</title>
+    <script>
+        function inp(){
+            let str = prompt("Enter a string", "JavaScript");
+            let result = countVowelsAndConsonants(str);
+            let txt = "Vowels: " + result.vowels + " (" + result.vowelList.join(", ") + ")\nConsonants: " + result.consonants;
+            document.getElementById("s1").innerHTML = txt;
+        }
+
+        function countVowelsAndConsonants(str) {
+            let vowels = 'aeiouAEIOU';
+            let vowelCount = 0;
+            let consonantCount = 0;
+            let vowelList = [];
+            let consonantList = [];
+            
+            for (let char of str) {
+                if (vowels.includes(char)) {
+                    vowelCount++;
+                    vowelList.push(char);
+                }
+                else {
+                    consonantCount++;
+                    consonantList.push(char);
+                }
+            }
+            document.getElementById("s1").innerHTML = vowelCount+"( "+vowelList+" )\n"+ consonantCount +"( "+ consonantList+" )";
+        }
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>
