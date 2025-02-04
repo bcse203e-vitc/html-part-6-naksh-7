@@ -1,0 +1,30 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Second Smallest and Largest</title>  
+    <script>  
+        function find() {  
+            let input = prompt("Enter an array of numbers separated by space", "");  
+            let arr = input.split(' ').map(Number);  
+            for(let i =0;i<arr.length;i++){
+                for(let j=i+1;j<arr.length;j++){
+                    if(arr[i]<arr[j]){
+                        let temp = arr[i];
+                        arr[i] = arr[j];
+                        arr[j] = temp;
+                    }
+                }
+            } 
+            let s2 = arr[1];  
+            let s3 = arr[arr.length - 2];  
+            document.getElementById("s1").innerHTML = "Second smallest: " +s2+" Second largest: "+ s3;
+        }  
+    </script>  
+</head>  
+<body>  
+    <button onclick="find()">Find Second Smallest and Largest</button>  
+    <p id="s1"></p>
+</body>  
+</html>
