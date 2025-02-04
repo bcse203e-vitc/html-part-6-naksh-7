@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q12</title>
+    <script>
+        function inp(){
+            let inp = prompt("Enter array of numbers", "");
+            let arr = inp.split(" ").map(Number); 
+            let arr1 = remove(arr);
+            
+            document.getElementById("s1").innerHTML = arr1;
+        }
+        function remove(arr) {  
+            let result = []; 
+            for (let i = 0; i < arr.length; i++) {  
+                let found = false 
+                for (let j = 0; j < result.length; j++) {  
+                    if (arr[i] === result[j]) {  
+                        found = true;  
+                        break 
+                    }  
+                }
+                if (!found) {  
+                    result.push(arr[i]);  
+                }  
+            }  
+
+            return result;  
+        } 
+        
+    </script>
+</head>
+<body>
+    <button id="rev" onclick="inp()">Click me</button>
+    <p id="s1"></p>
+</body>
+</html>
